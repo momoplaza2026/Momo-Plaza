@@ -1,0 +1,50 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+frontend/.env*
+backend/.env*
+
+# Node Modules
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+dist/
+build/
+frontend/dist/
+frontend/build/
+backend/dist/
+
+# Logs
+logs/
+*.log
+
+# Ignore sensitive/credentials files
+backend/credit-*.json
+firebase-adminsdk.json
+*secret*.json
+*.pem
+
+# Coverage & Testing
+coverage/
+.nyc_output/
