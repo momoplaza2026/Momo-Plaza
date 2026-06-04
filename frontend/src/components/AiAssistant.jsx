@@ -479,10 +479,11 @@ export default function AiAssistant() {
 
         @media (max-width: 600px) {
           .fg-fixed-wrapper {
-            bottom: 0 !important;
-            right: 0 !important;
-            left: 0 !important;
-            width: 100% !important;
+            bottom: 10px !important;
+            right: auto !important;
+            left: 24px !important;
+            width: auto !important;
+
           }
           
           .fg-panel {

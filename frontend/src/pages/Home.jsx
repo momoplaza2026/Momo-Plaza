@@ -439,6 +439,10 @@ const Home = () => {
             minHeight: "clamp(420px,60vh,550px)",
             display: "flex",
             alignItems: "center",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            gap: "2rem",
+            padding: "clamp(20px, 5vw, 60px)",
           }}
         >
           {/* Background - Animated Momo Image Carousel */}
@@ -516,7 +520,7 @@ const Home = () => {
             style={{
               position: "relative",
               zIndex: 2,
-              padding: "clamp(20px,5vw,60px)",
+              padding: 0,
               maxWidth: "700px",
             }}
           >
@@ -698,6 +702,65 @@ const Home = () => {
               ))}
             </div>
           </div>
+
+          {/* ── MAP CARD ── */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.4, type: 'spring', stiffness: 50 }}
+            style={{
+              position: "relative",
+              zIndex: 2,
+              width: "100%",
+              maxWidth: "420px",
+              background: 'rgba(255,255,255,0.05)',
+              backdropFilter: 'blur(16px)',
+              border: '1px solid rgba(255,255,255,0.1)',
+              borderRadius: 20,
+              overflow: 'hidden',
+              margin: '0 auto',
+            }}
+          >
+            {/* Map embed */}
+            <div style={{ position: 'relative', height: 240 }}>
+              <iframe
+                title="Momo Plaza Map"
+                src="https://maps.google.com/maps?q=709%20(8,%20136/4/2,%20Pashupati%20Bhattacharya%20Rd,%20East%20Behala,%20Green%20Park,%20Sarada%20Pally,%20Kolkata,%20West%20Bengal%20700034&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                style={{ width: '100%', height: '100%', border: 0, display: 'block' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            {/* Card footer */}
+            <div style={{
+              padding: '0.9rem 1.2rem',
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.8rem',
+            }}>
+              <div>
+                <p style={{ color: '#fff', fontWeight: 700, fontSize: '0.82rem', marginBottom: 2, margin: 0 }}>
+                  📍 East Behala, Kolkata
+                </p>
+                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.7rem', margin: 0 }}>
+                  Pashupati Bhattacharya Rd
+                </p>
+              </div>
+              <motion.a
+                whileHover={{ scale: 1.07 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://maps.app.goo.gl/rkUjSbaLdBraf1KV7"
+                target="_blank" rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '0.3rem',
+                  background: 'linear-gradient(135deg,#f59e0b,#dc2626)',
+                  color: '#fff', fontWeight: 700, fontSize: '0.72rem',
+                  padding: '0.42rem 0.9rem', borderRadius: 999,
+                  textDecoration: 'none', whiteSpace: 'nowrap', flexShrink: 0,
+                  boxShadow: '0 4px 14px rgba(245,158,11,0.35)',
+                }}
+              >Open ↗</motion.a>
+            </div>
+          </motion.div>
         </section>
 
         {/* ── Momos-Only Announcement Banner ── */}

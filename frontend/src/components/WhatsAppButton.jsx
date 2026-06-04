@@ -38,11 +38,11 @@ const WhatsAppButton = () => {
                     }
                     
                     /* Mobile styles */
-                    @media (max-width: 768px) {
+                    @media (max-width: 600px) {
                         .whatsapp-float-btn {
-                            bottom: 80px; /* Reduced gap slightly for tighter stacking */
+                            bottom: 80px;
                             right: auto;
-                            left: 0px;
+                            left: 24px;
                             width: 60px;
                             height: 60px;
                         }
