@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://momoplaza.vercel.app/sitemap.xml

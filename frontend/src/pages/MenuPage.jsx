@@ -11,6 +11,7 @@ import {
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import axios from 'axios';
+import SEO from '../components/SEO';
 
 // Loader Component with Red Theme
 const Loader = () => {
@@ -242,6 +243,10 @@ const MenuPage = () => {
 
     return (
         <div style={styles.page}>
+            <SEO 
+                title="Our Menu - Authentic Momos & More | Momo Plaza" 
+                description="Explore our wide range of authentic momos, Chinese dishes, and beverages at Momo Plaza. Order online for quick delivery in Kolkata."
+            />
             <AnimatePresence>
                 {loading && <Loader />}
             </AnimatePresence>

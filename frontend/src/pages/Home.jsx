@@ -5,6 +5,7 @@ import { Star, Utensils, ChevronLeft, ChevronRight, Clock, MapPin, Award, Flame,
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import axios from 'axios';
+import SEO from '../components/SEO';
 
 // ── Momos-Only Banner ──────────────────────────────────────────────────────
 const MomosOnlyBanner = () => {
@@ -422,8 +423,46 @@ const Home = () => {
     }
   ];
 
+  // LocalBusiness Schema JSON-LD
+  const restaurantSchema = {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Momo Plaza",
+    "image": "https://momoplaza.vercel.app/brand_logo.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "709 (8, 136/4/2, Pashupati Bhattacharya Rd, East Behala, Green Park, Sarada Pally",
+      "addressLocality": "Kolkata",
+      "addressRegion": "West Bengal",
+      "postalCode": "700034",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 22.4924,
+      "longitude": 88.3182
+    },
+    "telephone": "+919876543210",
+    "servesCuisine": ["Momos", "Himalayan", "Chinese"],
+    "priceRange": "₹",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "22:00"
+      }
+    ],
+    "menu": "https://momoplaza.vercel.app/menu"
+  };
+
   return (
     <>
+      <SEO 
+        title="Best Momos in Kolkata | Momo Plaza" 
+        description="Craving momos? Order from Momo Plaza in East Behala, Kolkata. Fresh, hot, and authentic Himalayan momos delivered near you."
+        jsonLd={restaurantSchema}
+      />
       <AnimatePresence>
         {isLoading && <Loader />}
       </AnimatePresence>

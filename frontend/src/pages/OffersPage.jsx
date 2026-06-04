@@ -9,6 +9,7 @@ import {
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import SEO from "../components/SEO";
 
 const OffersPage = () => {
   const [offers, setOffers] = useState([]);
@@ -153,6 +154,10 @@ const OffersPage = () => {
       justifyContent: 'center',
       width: '100%',
     }}>
+      <SEO 
+        title="Special Offers & Discounts | Momo Plaza" 
+        description="Get the best deals on Momos in Kolkata! Check out our latest coupon codes and discounts at Momo Plaza."
+      />
       <div style={{
         maxWidth: '1400px',
         width: '100%',
