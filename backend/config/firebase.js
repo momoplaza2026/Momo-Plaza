@@ -72,11 +72,11 @@ const sendNotificationToTopic = async (topic, title, body, data = {}, image = nu
             ...data,
             title,
             body,
-            click_action: process.env.FRONTEND_URL || 'https://meal-matrix-sigma.vercel.app/',
+            click_action: 'https://momo-plaza.vercel.app/',
         },
         webpush: {
             fcmOptions: {
-                link: process.env.FRONTEND_URL || 'https://meal-matrix-sigma.vercel.app/'
+                link: 'https://momo-plaza.vercel.app/'
             },
             headers: {
                 TTL: '3600'

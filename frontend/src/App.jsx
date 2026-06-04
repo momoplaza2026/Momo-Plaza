@@ -21,7 +21,7 @@ import { useNotifications } from './context/NotificationContext';
 import WhatsAppButton from './components/WhatsAppButton';
 
 // Configure global axios baseURL
-axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+axios.defaults.baseURL = 'https://momo-plaza.onrender.com';
 axios.defaults.withCredentials = true;
 
 // localStorage key to remember previously saved FCM token

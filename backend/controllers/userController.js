@@ -250,11 +250,11 @@ const testNotification = async (req, res) => {
                     title: 'MealMatrix: Direct Push 🚀',
                     body: 'If you see this, your browser can receive direct messages from our server!',
                     type: 'TEST_DIRECT',
-                    click_action: process.env.FRONTEND_URL || 'https://meal-matrix-sigma.vercel.app/',
+                    click_action: 'https://momo-plaza.vercel.app/',
                 },
                 webpush: {
                     fcmOptions: {
-                        link: process.env.FRONTEND_URL || 'https://meal-matrix-sigma.vercel.app/'
+                        link: 'https://momo-plaza.vercel.app/'
                     }
                 }
             };
